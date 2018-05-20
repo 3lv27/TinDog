@@ -12,9 +12,11 @@
 		2DC78CB120B1F2D800E21610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC78CAF20B1F2D800E21610 /* Main.storyboard */; };
 		2DC78CB320B1F2D900E21610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC78CB220B1F2D900E21610 /* Assets.xcassets */; };
 		2DC78CB620B1F2D900E21610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC78CB420B1F2D900E21610 /* LaunchScreen.storyboard */; };
+		B45257AEFD0EC1D9002F06E8 /* Pods_tinDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC1BB792910DCC6CDBBAB83 /* Pods_tinDog.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2DC1BB792910DCC6CDBBAB83 /* Pods_tinDog.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_tinDog.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC78CA820B1F2D800E21610 /* tinDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tinDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2DC78CAB20B1F2D800E21610 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2DC78CAD20B1F2D800E21610 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		2DC78CB220B1F2D900E21610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DC78CB520B1F2D900E21610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DC78CB720B1F2D900E21610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		64E1739C08904514C170449E /* Pods-tinDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tinDog/Pods-tinDog.debug.xcconfig"; sourceTree = "<group>"; };
+		F93B2C09F204D35E47013CC8 /* Pods-tinDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinDog.release.xcconfig"; path = "Pods/Target Support Files/Pods-tinDog/Pods-tinDog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B45257AEFD0EC1D9002F06E8 /* Pods_tinDog.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		10F03E26B4409C33F4AD13D2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2DC1BB792910DCC6CDBBAB83 /* Pods_tinDog.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		2DC78C9F20B1F2D800E21610 = {
 			isa = PBXGroup;
 			children = (
 				2DC78CAA20B1F2D800E21610 /* tinDog */,
 				2DC78CA920B1F2D800E21610 /* Products */,
+				B2AD05907728BF25C2132AFF /* Pods */,
+				10F03E26B4409C33F4AD13D2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = tinDog;
 			sourceTree = "<group>";
 		};
+		B2AD05907728BF25C2132AFF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				64E1739C08904514C170449E /* Pods-tinDog.debug.xcconfig */,
+				F93B2C09F204D35E47013CC8 /* Pods-tinDog.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2DC78CBA20B1F2D900E21610 /* Build configuration list for PBXNativeTarget "tinDog" */;
 			buildPhases = (
+				2E1D698B0C497F1B5AC84297 /* [CP] Check Pods Manifest.lock */,
 				2DC78CA420B1F2D800E21610 /* Sources */,
 				2DC78CA520B1F2D800E21610 /* Frameworks */,
 				2DC78CA620B1F2D800E21610 /* Resources */,
+				ADB8FB9FBD74F05BCD42CCF8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2E1D698B0C497F1B5AC84297 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-tinDog-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ADB8FB9FBD74F05BCD42CCF8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-tinDog/Pods-tinDog-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tinDog/Pods-tinDog-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2DC78CA420B1F2D800E21610 /* Sources */ = {
@@ -278,6 +343,7 @@
 		};
 		2DC78CBB20B1F2D900E21610 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 64E1739C08904514C170449E /* Pods-tinDog.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +362,7 @@
 		};
 		2DC78CBC20B1F2D900E21610 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F93B2C09F204D35E47013CC8 /* Pods-tinDog.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
