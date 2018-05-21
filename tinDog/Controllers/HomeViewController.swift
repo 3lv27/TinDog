@@ -17,6 +17,8 @@ class NavigationImageView : UIImageView {
 class HomeViewController: UIViewController {
     @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var homeWrapper: UIStackView!
+    @IBOutlet weak var likedImage: UIImageView!
+    @IBOutlet weak var nopeImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +43,18 @@ class HomeViewController: UIViewController {
         
         self.cardView.transform = finalTransform
         
+        if self.cardView.center.x < (self.view.bounds.width / 2 - 100) {
+            print("Dislike")
+            self.nopeImage.alpha = min(abs(xFromCenter) / 100, 1)
+        }
+        
+        if self.cardView.center.x > (self.view.bounds.width / 2 + 100) {
+            print("Like")
+            self.likedImage.alpha = min(abs(xFromCenter) / 100, 1)
+        }
+        
+        
+        
         if gestureRecongnizer.state == .ended {
 //            print(self.cardView.center.x)
             if self.cardView.center.x < (self.view.bounds.width / 2 - 100) {
@@ -51,9 +65,12 @@ class HomeViewController: UIViewController {
                 print("Like")
             }
             
+            //Restarting card values..
             rotate = CGAffineTransform(rotationAngle: 0)
             finalTransform = rotate.scaledBy(x: 1, y: 1)
             self.cardView.transform = finalTransform
+            self.likedImage.alpha = 0
+            self.nopeImage.alpha = 0
             
             self.cardView.center = CGPoint(x: self.homeWrapper.bounds.width / 2, y: (self.homeWrapper.bounds.height / 2 - 30))
         }

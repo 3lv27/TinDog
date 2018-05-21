@@ -40,10 +40,27 @@
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="crispeta" translatesAutoresizingMaskIntoConstraints="NO" id="6ea-Tx-w41">
                                                 <rect key="frame" x="12" y="8" width="327" height="432"/>
                                             </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="like_image" translatesAutoresizingMaskIntoConstraints="NO" id="JFi-kD-DxJ">
+                                                <rect key="frame" x="25" y="25" width="158" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="PEs-9Q-tQm"/>
+                                                    <constraint firstAttribute="width" constant="158" id="fEn-TP-lin"/>
+                                                </constraints>
+                                            </imageView>
+                                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nope_image" translatesAutoresizingMaskIntoConstraints="NO" id="gzT-kv-B6u">
+                                                <rect key="frame" x="168" y="25" width="158" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="tLZ-ao-If8"/>
+                                                    <constraint firstAttribute="width" constant="158" id="uib-Rz-TRg"/>
+                                                </constraints>
+                                            </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="gzT-kv-B6u" secondAttribute="trailing" constant="25" id="2lM-Lk-hIv"/>
                                             <constraint firstAttribute="trailing" secondItem="Din-Qn-K5G" secondAttribute="trailing" id="9tM-Cd-Lbc"/>
+                                            <constraint firstItem="JFi-kD-DxJ" firstAttribute="leading" secondItem="C1e-l6-gut" secondAttribute="leading" constant="25" id="9us-YK-Qzp"/>
+                                            <constraint firstItem="JFi-kD-DxJ" firstAttribute="top" secondItem="C1e-l6-gut" secondAttribute="top" constant="25" id="D8h-CV-vea"/>
                                             <constraint firstItem="MKx-GP-BhL" firstAttribute="top" secondItem="6ea-Tx-w41" secondAttribute="bottom" constant="2.5" id="FFu-Ki-yP4"/>
                                             <constraint firstItem="MKx-GP-BhL" firstAttribute="leading" secondItem="C1e-l6-gut" secondAttribute="leading" constant="14" id="LHs-8d-3SI"/>
                                             <constraint firstItem="Din-Qn-K5G" firstAttribute="top" secondItem="C1e-l6-gut" secondAttribute="top" id="Lzw-sN-0Ny"/>
@@ -52,6 +69,7 @@
                                             <constraint firstAttribute="bottom" secondItem="Din-Qn-K5G" secondAttribute="bottom" id="aWB-eg-ThY"/>
                                             <constraint firstItem="6ea-Tx-w41" firstAttribute="top" secondItem="C1e-l6-gut" secondAttribute="top" constant="8" id="aa1-mr-1HU"/>
                                             <constraint firstAttribute="width" secondItem="C1e-l6-gut" secondAttribute="height" multiplier="356:507" id="gkV-hD-sX4"/>
+                                            <constraint firstItem="gzT-kv-B6u" firstAttribute="top" secondItem="C1e-l6-gut" secondAttribute="top" constant="25" id="km9-e5-ucd"/>
                                             <constraint firstAttribute="trailing" secondItem="6ea-Tx-w41" secondAttribute="trailing" constant="12" id="mqh-jr-ZSL"/>
                                             <constraint firstAttribute="trailing" secondItem="MKx-GP-BhL" secondAttribute="trailing" constant="14" id="rLO-ol-aR4"/>
                                             <constraint firstItem="6ea-Tx-w41" firstAttribute="leading" secondItem="C1e-l6-gut" secondAttribute="leading" constant="12" id="re4-iV-tfn"/>
@@ -110,6 +128,8 @@
                     <connections>
                         <outlet property="cardView" destination="C1e-l6-gut" id="65v-KQ-aNE"/>
                         <outlet property="homeWrapper" destination="e3v-Gz-nY8" id="0Am-IE-QKf"/>
+                        <outlet property="likedImage" destination="JFi-kD-DxJ" id="SZR-dD-Rrv"/>
+                        <outlet property="nopeImage" destination="gzT-kv-B6u" id="27t-Ic-Kye"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -143,5 +163,7 @@
         <image name="Super Like" width="51" height="51"/>
         <image name="Swipe Card" width="356" height="507"/>
         <image name="crispeta" width="1080" height="1079"/>
+        <image name="like_image" width="170" height="114"/>
+        <image name="nope_image" width="197" height="130"/>
     </resources>
 </document>
