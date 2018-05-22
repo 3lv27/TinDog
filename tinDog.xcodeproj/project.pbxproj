@@ -13,6 +13,8 @@
 		2DC78CB120B1F2D800E21610 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC78CAF20B1F2D800E21610 /* Main.storyboard */; };
 		2DC78CB320B1F2D900E21610 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2DC78CB220B1F2D900E21610 /* Assets.xcassets */; };
 		2DC78CB620B1F2D900E21610 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2DC78CB420B1F2D900E21610 /* LaunchScreen.storyboard */; };
+		2DF8C40320B4A19E004516BA /* UIViewExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DF8C40220B4A19E004516BA /* UIViewExt.swift */; };
+		2DF8C40520B4B542004516BA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2DF8C40420B4B542004516BA /* GoogleService-Info.plist */; };
 		B45257AEFD0EC1D9002F06E8 /* Pods_tinDog.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DC1BB792910DCC6CDBBAB83 /* Pods_tinDog.framework */; };
 /* End PBXBuildFile section */
 
@@ -26,6 +28,8 @@
 		2DC78CB220B1F2D900E21610 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2DC78CB520B1F2D900E21610 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2DC78CB720B1F2D900E21610 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2DF8C40220B4A19E004516BA /* UIViewExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExt.swift; sourceTree = "<group>"; };
+		2DF8C40420B4B542004516BA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64E1739C08904514C170449E /* Pods-tinDog.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinDog.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tinDog/Pods-tinDog.debug.xcconfig"; sourceTree = "<group>"; };
 		F93B2C09F204D35E47013CC8 /* Pods-tinDog.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tinDog.release.xcconfig"; path = "Pods/Target Support Files/Pods-tinDog/Pods-tinDog.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,14 +84,24 @@
 		2DC78CAA20B1F2D800E21610 /* tinDog */ = {
 			isa = PBXGroup;
 			children = (
+				2DF8C40120B4A146004516BA /* Extensions */,
 				2D95F72120B2DE09001BCF19 /* Controllers */,
 				2DC78CAB20B1F2D800E21610 /* AppDelegate.swift */,
 				2DC78CAF20B1F2D800E21610 /* Main.storyboard */,
 				2DC78CB220B1F2D900E21610 /* Assets.xcassets */,
 				2DC78CB420B1F2D900E21610 /* LaunchScreen.storyboard */,
 				2DC78CB720B1F2D900E21610 /* Info.plist */,
+				2DF8C40420B4B542004516BA /* GoogleService-Info.plist */,
 			);
 			path = tinDog;
+			sourceTree = "<group>";
+		};
+		2DF8C40120B4A146004516BA /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2DF8C40220B4A19E004516BA /* UIViewExt.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		B2AD05907728BF25C2132AFF /* Pods */ = {
@@ -160,6 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2DC78CB620B1F2D900E21610 /* LaunchScreen.storyboard in Resources */,
+				2DF8C40520B4B542004516BA /* GoogleService-Info.plist in Resources */,
 				2DC78CB320B1F2D900E21610 /* Assets.xcassets in Resources */,
 				2DC78CB120B1F2D800E21610 /* Main.storyboard in Resources */,
 			);
@@ -193,11 +208,19 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-tinDog/Pods-tinDog-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/RevealingSplashView/RevealingSplashView.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RevealingSplashView.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -211,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2DF8C40320B4A19E004516BA /* UIViewExt.swift in Sources */,
 				2D95F72520B37FAA001BCF19 /* LoginViewController.swift in Sources */,
 				2DC78CAC20B1F2D800E21610 /* AppDelegate.swift in Sources */,
 				2D95F72320B2DE6E001BCF19 /* HomeViewController.swift in Sources */,
